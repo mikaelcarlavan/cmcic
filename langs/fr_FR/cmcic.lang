@@ -1,0 +1,104 @@
+# Dolibarr language file - fr_FR - cmcic
+# Admin form
+CHARSET=UTF-8
+Module70200Desc=Module de paiement par carte de crédit avec la solution de paiement CM-CIC
+Module70200Name=CM-CIC
+CMCICAdmin=Configuration du module CM-CIC
+CMCICDesc=Ce module permet les paiements des factures Dolibarr par carte de crédit via le service <a href="http://www.cmcicpaiement.fr" target="_blank">CM-CIC</a>
+Configuration=Configuration
+Value=Valeur
+Infos=Information
+UsageParameters=Paramètres d'utilisation
+IntegrationParameters=Paramètres d'intégration
+CcEmail=Etre en copie des emails ?
+DeliveryReceiptEmail=Demander un accusé de réception ?
+CcEmails=Liste des adresses emails additionnelles en copie
+BankAccountId=Compte bancaire à créditer
+UpdateInvoiceStatut=Mise à jour automatique des factures ?
+PaymentAutoSend=Envoi automatique de l'email de paiement ?
+#
+ApiTest=Utilisation en mode test
+TpeNumber=Numéro de TPE
+ApiKey=Contenu de votre fichier clé
+ApiShopId=Code société
+SecurityToken=Clé de sécurité
+ApiBankServer=Banque
+ApiTpeNumber=Numéro de TPE
+# Tooltips
+ApiTestTooltip=Utilisation en mode test ou en production <br />(3 paiements validés en mode test sont <br />nécessaires pour passer en production)
+ApiBankServerTooltip=Le module permet l'utilisation des banques <br />du CIC, du Crédit Mutuel et de la Neuflize OBC
+ApiTpeNumberTooltip=Entrez le numéro de TPE virtuel qui vous a <br /> été attribué. Celui-ci est constitué de 7 caractères
+ApiKeyTooltip=Entrez le contenu du fichier clé qui vous a été fournie. Actuellement,<br /> le module ne supporte que les clés de type v3
+ApiShipIdTooltip=Entrez le code société qui vous a été attribué
+SecurityTokenTooltip=Vous pouvez entrer votre clé de sécurité <br />ou la générer automatiquement en cliquant sur <br />l'icône situé à proximité
+CcEmailsTooltip=Entrez la liste des adresses email additionnelles à  <br />placer en copie des emails de paiement et de confirmation. <br />Les adresses emails doivent être séparées par une<br /> virgule
+DeliveryReceiptEmailTooltip=Vous pouvez demander à recevoir un accusé de <br />réception lors de l'envoi du lien de règlement
+CcEmailTooltip=Vous pouvez choisir d'être en copie de l'email<br />contenant le lien de règlement ainsi que l'email de<br />confirmation de paiement. L'adresse email utilisée <br />est celle spécifiée dans la configuration initiale de<br /> Dolibarr
+BankAccountIdTooltip=Le module peut être complètement intégrer <br />à la partie banques/caisses de Dolibarr et insérer <br />les écritures correspondant aux paiements <br />des factures. Pour activer cette option,<br /> vous devez sélectionner un compte bancaire<br /> à créditer. L'option sera désactivée si aucun <br />compte n'est sélectionné.
+UpdateInvoiceStatutTooltip=Vous pouvez choisir de mettre à jour <br />automatiquement le statut des factures dont<br /> le paiement bancaire a été validé.<br /> Si vous activez cette option,<br /> toutes les factures dont le paiement<br /> (complet) aura été accepté verront<br /> leur statut modifié en <em>payée</em>.
+PaymentAutoSendTooltip=Vous pouvez choisir de désactiver <br />l'envoi automatique de l'email contenant<br /> le lien de paiement. Si vous désactivez cette option,<br /> vous devez ajouter l'attribut supplémentaire<br /> <em>payment_link</em> (de type chaîne) au module <em>Factures</em>.
+# Admin tooltips
+SetupSaved=Configuration sauvegardée
+# Emails subject
+InvoiceErrorPaymentEmailSubject=Récapitulatif de transaction bancaire
+OrderErrorPaymentEmailSubject=Récapitulatif de transaction bancaire
+InvoiceSuccessPaymentEmailSubject=Confirmation de paiement
+OrderSuccessPaymentEmailSubject=Confirmation de paiement
+InvoicePaymentEmailSubject=Lien pour le règlement de la facture __OBJREF__
+OrderPaymentEmailSubject=Lien pour le règlement de la facture __OBJREF__
+# 
+ErrorPaymentUnauthorizedEmail=Nous sommes désolés mais le paiement a été refusé. Votre établissement bancaire a refusé l'autorisation de la transaction.\n
+ErrorPaymentCanceledEmail=Le paiement a été annulé. Vous pouvez à tout moment cliquer de nouveau sur lien de règlement contenu dans l'email précédent pour accéder à la page de règlement.
+ErrorPaymentTechnicalErrorEmail=Nous sommes désolés mais le paiement a été refusé suite à une erreur technique.\n
+InvoicePaymentEmailBody=Bonjour,\nVous pouvez cliquer sur le lien sécurisé ci-dessous pour effectuer le règlement de votre facture __OBJREF__ à destination de __SOCNAM__ via notre interface de paiement bancaire\n\n<a href="__PAYURL__">__PAYURL__</a>\n\nCordialement,\n__SOCNAM__\n
+OrderPaymentEmailBody=Bonjour,\nVous pouvez cliquer sur le lien sécurisé ci-dessous pour effectuer le règlement de votre commande __OBJREF__ à destination de __SOCNAM__ via notre interface de paiement bancaire\n\n<a href="__PAYURL__">__PAYURL__</a>\n\nCordialement,\n__SOCNAM__\n
+InvoiceSuccessPaymentEmailBody=Bonjour,\nNous vous informons que nous avons bien reçu votre paiement d'un montant de __AMOOBJ__ TTC pour le règlement de la facture __OBJREF__ \n\nCordialement,\n__SOCNAM__\n
+InvoiceErrorPaymentEmailBody=Nous vous invitons à réitérer le processus de paiement et à nous contacter via l'adresse email __SOCMAI__ si celui-ci est de nouveau refusé.\n\nCordialement,\n__SOCNAM__
+OrderSuccessPaymentEmailBody=Bonjour,\nNous vous informons que nous avons bien reçu votre paiement d'un montant de __AMOOBJ__ TTC pour le règlement de la commande __OBJREF__ \n\nCordialement,\n__SOCNAM__\n
+OrderErrorPaymentEmailBody=Nous vous invitons à réitérer le processus de paiement et à nous contacter via l'adresse email __SOCMAI__ si celui-ci est de nouveau refusé.\n\nCordialement,\n__SOCNAM__
+#
+InvoiceReference=Référence facture
+OrderReference=Référence commande
+NoPaymentObject=Il n'existe aucun paiement correspondant à votre requête. Nous vous invitons à nous contacter à l'adresse <strong>__SOCMAI__</strong> si vous observez ce message pour la première fois.
+ConfigurationError=Ce paiement est indisponible pour le moment
+InvoicePaymentAlreadyDone=Le paiement de cette facture a déjà été réalisé. Nous vous invitons à nous contacter à l'adresse <strong>__SOCMAI__</strong> si vous observez ce message pour la première fois.
+OrderPaymentAlreadyDone=Le paiement de cette commande a déjà été réalisé. Nous vous invitons à nous contacter à l'adresse <strong>__SOCMAI__</strong> si vous observez ce message pour la première fois.
+RedirectSuccessMessage=Redirection vers la boutique dans quelques instants
+RedirectErrorMessage=Redirection vers la boutique dans quelques instants
+Creditor=Bénéficiaire
+Continue=Continuer
+#
+InvoicePaymentFormWelcomeTitle=Bienvenue sur notre service de paiement en ligne
+InvoicePaymentFormWelcomeText=Cet écran vous permet de réaliser votre paiement en ligne à destination de <strong>__SOCNAM__</strong>.      
+InvoicePaymentFormDescText=Merci de vérifier que ces informations sont correctes puis cliquer sur le bouton "Continuer" pour être connecté sur le serveur sécurisé de paiement bancaire. <br />En cas d'erreur, vous pouvez envoyer un email à l'adresse <strong>__SOCMAI__</strong> en spécifiant la référence de votre facture.
+InvoicePaymentInfo=Voici les informations sur le paiement à réaliser :
+OrderPaymentFormWelcomeTitle=Bienvenue sur notre service de paiement en ligne
+OrderPaymentFormWelcomeText=Cet écran vous permet de réaliser votre paiement en ligne à destination de <strong>__SOCNAM__</strong>.
+OrderPaymentFormDescText=Merci de vérifier que ces informations sont correctes puis cliquer sur le bouton "Continuer" pour être connecté sur le serveur sécurisé de paiement bancaire. <br />En cas d'erreur, vous pouvez envoyer un email à l'adresse <strong>__SOCMAI__</strong> en spécifiant la référence de votre commande.
+OrderPaymentInfo=Voici les informations sur le paiement à réaliser :
+#
+TransactionReference=Référence de la transaction
+AmountAlreadyPaid=Somme déjà perçue
+AmountToPay=Montant total du règlement
+InvoiceAmount=Montant total de la facture
+OrderAmount=Montant total de la commande
+CustomerEmail=Votre adresse email
+CustomerName=Votre nom
+PaymentFormTitle=Formulaire de paiement
+PaymentDesc=Voici les informations sur le paiement à réaliser
+#
+InvoicePaymentCanceled=Le paiement a été annulé. Vous pouvez à tout moment cliquer de nouveau sur lien de règlement contenu dans l'email pour accéder au règlement de votre facture.
+InvoicePaymentRefused=Nous sommes désolés mais le paiement a été refusé. Nous vous invitons à réitérer le processus de règlement à partir du lien contenu dans l'email de règlement.<br /> <br />Si le problème persiste, merci de nous contacter à l'adresse email <strong>__SOCMAI__</strong> en nous indiquant la référence de la facture.
+InvoicePaymentAccepted=Le paiement a été accepté. <strong>__SOCNAM__</strong> vous en remercie. <br /><br />Un email de confirmation vous a été envoyé, merci de le conserver précieusement.
+OrderPaymentCanceled=Le paiement a été annulé. Vous pouvez à tout moment cliquer de nouveau sur lien de règlement contenu dans l'email pour accéder au règlement de votre facture.
+OrderPaymentRefused=Nous sommes désolés mais le paiement a été refusé. Nous vous invitons à réitérer le processus de règlement à partir du lien contenu dans l'email de règlement.<br /> <br />Si le problème persiste, merci de nous contacter à l'adresse email <strong>__SOCMAI__</strong> en nous indiquant la référence de la facture.
+OrderPaymentAccepted=Le paiement a été accepté. <strong>__SOCNAM__</strong> vous en remercie. <br /><br />Un email de confirmation vous a été envoyé, merci de le conserver précieusement.
+# Admin error
+BadEmail=L'une des adresses emails spécifiées est incorrecte
+# Payment form
+RefParamUndefined=La référence n'a pas été spécifié dans l'URL de paiement. Nous vous invitons à cliquer de nouveau sur le lien de paiement et à nous contacter à l'adresse <strong>__SOCMAI__</strong> si vous observez encore ce message.
+WrongToken=La clé de sécurité est erronée. Nous vous invitons à cliquer de nouveau sur le lien de paiement et à nous contacter à l'adresse <strong>__SOCMAI__</strong> si vous observez encore ce message.
+TpeNumberUndefined=Le numéro TPE est indéfini. Merci de nous contacter à l'adresse <strong>__SOCMAI__</strong> pour nous signaler ce problème technique.
+SocietyIdUndefined=Le code société est indéfini. Merci de nous contacter à l'adresse <strong>__SOCMAI__</strong> pour nous signaler ce problème technique.
+BankUndefined=Le serveur de banque est indéfini. Merci de nous contacter à l'adresse <strong>__SOCMAI__</strong> pour nous signaler ce problème technique.
+KeyUndefined=La clé est indéfinie. Merci de nous contacter à l'adresse <strong>__SOCMAI__</strong> pour nous signaler ce problème technique.
